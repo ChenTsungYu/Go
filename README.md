@@ -317,11 +317,31 @@ author(s) [ddaniel27](https://github.com/ddaniel27)
 
 ---
 </details><details>
+	<summary> <strong> dsa </strong> </summary>	
+
+---
+
+##### /*
+dsa.go
+description: DSA encryption and decryption including key generation
+details: [DSA wiki](https://en.wikipedia.org/wiki/Digital_Signature_Algorithm)
+author(s): [ddaniel27](https://github.com/ddaniel27)
+ 
+
+---
+##### Functions:
+
+1. [`New`](./cipher/dsa/dsa.go#L36):  New creates a new DSA instance
+2. [`Sign`](./cipher/dsa/dsa.go#L125):  Sign is signature generation for DSA 1. Choose a random integer k from the range [1, q-1] 2. Compute r = (g^k mod p) mod q 3. Compute s = (k^-1 * (H(m) + x*r)) mod q
+3. [`Verify`](./cipher/dsa/dsa.go#L157):  Verify is signature verification for DSA 1. Compute w = s^-1 mod q 2. Compute u1 = (H(m) * w) mod q 3. Compute u2 = (r * w) mod q 4. Compute v = ((g^u1 * y^u2) mod p) mod q 5. If v == r, the signature is valid
+
+---
+</details><details>
 	<summary> <strong> dynamic </strong> </summary>	
 
 ---
 
-#####  Package dynamic is a package of certain implementations of dynamically run algorithms. filename: traprainwater.go description: Provides a function to calculate the amount of trapped rainwater between bars represented by an elevation map using dynamic programming. details: The TrapRainWater function calculates the amount of trapped rainwater between the bars represented by the given elevation map. It uses dynamic programming to precompute the maximum height of bars to the left and right of each position. Then, it iterates through the array to calculate the amount of trapped rainwater at each position based on the minimum of the left and right maximum heights. Finally, it sums up the trapped rainwater for all positions and returns the total amount. author(s) [TruongNhanNguyen (SOZEL)](https://github.com/TruongNhanNguyen) See https://leetcode.com/problems/unique-paths/ author: Rares Mateizer (https://github.com/rares985)
+#####  filename: traprainwater.go description: Provides a function to calculate the amount of trapped rainwater between bars represented by an elevation map using dynamic programming. details: The TrapRainWater function calculates the amount of trapped rainwater between the bars represented by the given elevation map. It uses dynamic programming to precompute the maximum height of bars to the left and right of each position. Then, it iterates through the array to calculate the amount of trapped rainwater at each position based on the minimum of the left and right maximum heights. Finally, it sums up the trapped rainwater for all positions and returns the total amount. author(s) [TruongNhanNguyen (SOZEL)](https://github.com/TruongNhanNguyen) Package dynamic is a package of certain implementations of dynamically run algorithms. See https://leetcode.com/problems/unique-paths/ author: Rares Mateizer (https://github.com/rares985)
 
 ---
 ##### Functions:
@@ -1114,7 +1134,7 @@ author(s): [ddaniel27](https://github.com/ddaniel27)
 
 ---
 
-#####  Package sort implements various sorting algorithms. Package sort a package for demonstrating sorting algorithms in Go
+#####  Package sort a package for demonstrating sorting algorithms in Go Package sort implements various sorting algorithms.
 
 ---
 ##### Functions:
